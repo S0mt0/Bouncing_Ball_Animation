@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&family=Pacifico&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  /* background-color: black; */
+  height: 100vh;
+  font-family: sans-serif;
+  /* position: relative; */
+}
+
+/* |||BUTTON||| */
+
+.btn-block {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.btn-block p {
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+  color: brown;
+}
+
+.toggle-Btn {
+  width: 50px;
+  height: 20px;
+  outline: none;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  background-color: rgb(145, 139, 139);
+  border: none;
+  position: relative;
+}
+
+.toggle-Btn .circle-btn {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border: none;
+  top: 2.5px;
+  left: 3px;
+  border-radius: 50%;
+  background-color: blanchedalmond;
+  transition: transform 0.4s ease;
+}
+
+.move .circle-btn {
+  transform: translateX(29px);
+}
+
+.color {
+  background-color: cadetblue;
+}
+
+.color .circle-btn {
+  background-color: blanchedalmond;
+}
+
+/* |||ANIMATED BLOCK||| */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: rgba(250, 137, 212, 0.863);
+  box-shadow: inset -1px -1px 6px whitesmoke,
+    inset -10px -10px 30px rgb(97, 95, 95), 40px 40px 30px rgb(100, 99, 99);
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  display: grid;
+  /* place-content: center; */
+}
+
+.circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: blue;
+  box-shadow: inset 0 0 20px dodgerblue, 10px 10px 20px rgb(100, 99, 99);
+  border: 1px solid rgba(20, 134, 248, 0.575);
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container .motion {
+  animation: motion 10s linear 1s infinite forwards;
+}
+
+/* |||ANIMATION||| */
+@keyframes motion {
+  0% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  12.5% {
+    transform: translate(165px, -150px);
+  }
+  25% {
+    transform: translate(-60px, -405px);
+  }
+  37.5% {
+    transform: translate(-245px, -250px);
+  }
+  50% {
+    transform: translate(-100px, 0);
+  }
+  62.5% {
+    transform: translate(165px, -170px);
+  }
+  75% {
+    transform: translate(30px, -405px);
+  }
+  87.5% {
+    transform: translate(-245px, -200px);
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
